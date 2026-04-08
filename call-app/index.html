@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call-app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-content">
+        <h2>New Call</h2>
+        <form id="frm">
+          <label>Image URL</label>
+          <input id="imgurl" required type="text" placeholder="https://example.com/photo.jpg" />
+
+          <label>Full Name</label>
+          <input id="fullname" required type="text" placeholder="Enter full name" />
+
+          <label>Home Town</label>
+          <input id="hometown" required type="text" placeholder="Enter home town" />
+
+          <label>Purpose</label>
+          <input id="purpose" required type="text" placeholder="e.g., Quick appointment note" />
+
+          <label>Category</label>
+          <div class="categories">
+            <label class="tag-radio">
+              <input required type="radio" name="category" value="emergency"/>
+              <span>Emergency</span>
+            </label>
+
+            <label class="tag-radio">
+              <input required type="radio" name="category" value="important" />
+              <span>Important</span>
+            </label>
+
+            <label class="tag-radio">
+              <input required type="radio" name="category" value="urgent"/>
+              <span>Urgent</span>
+            </label>
+
+            <label class="tag-radio">
+              <input required type="radio" name="category" value="no-rush"/>
+              <span>No Rush</span>
+            </label>
+          </div>
+          <button type="submit" class="submit-btn">Create Note</button>
+        </form>
+        <button type="button" class="closeForm">Close</button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="left-icons">
+        <div class="circle-btn" id="pluse">+</div>
+        <div class="circle-btn" id="upBtn">↑</div>
+        <div class="circle-btn" id="downBtn">↓</div>
+      </div>
+
+      <div class="card-container">
+
+      </div>
+
+      <div class="color-dot">
+        <div class="dot Black"></div>
+        <div class="dot Purple"></div>
+        <div class="dot Orange"></div>
+        <div class="dot teal"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
