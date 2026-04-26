@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            font-family: "outfit";
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            width: 100%;
+            height: 100%;
+            text-transform: capitalize;
+        }
+        input{
+            display: none;
+        }
+        #btn{
+            padding: 18px 30px; 
+            background-color: rgb(30, 99, 87);
+            color: white;
+            font-size: 2rem;
+            border-radius: 15px;
+            user-select: none;
+        }
+        #main #btn:hover{
+            background-color:rgb(22, 74, 66);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+        <input id="inp" type="file">
+        <div id="btn">
+            upload file
+        </div>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>

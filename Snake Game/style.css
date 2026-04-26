@@ -1,0 +1,134 @@
+:root {
+  /* background-color */
+  --bg-primary: #0c0c0c;
+  --bg-secondary: #1d1d1d;
+  --bg-tertiary: #232222;
+  --bg-fill:#f4f4f4;
+  --bg-button: seagreen;
+
+  /* text-color */
+  --text-primary: #f0f0f0;
+
+  /* font-size */
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  /* border-color:*/
+  --border-primary: #939393;
+
+  /* space */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "century gothic";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+section,
+main {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: var(--space-md);
+}
+.infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  border: 1px solid var(--border-primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+}
+
+.btn{
+  background-color: var(--bg-button);
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: none;
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  transition:0.3s ease;
+  cursor: pointer;
+  font-weight: 400;
+}
+.btn:hover{
+  background-color: seagreen;
+  transform:scale(1.05);
+}
+.board {
+  border: 1px solid var(--border-primary);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.block{
+    /* border: 1px solid var(--border-primary); */
+    border-radius: 50%;
+}
+
+.fill{
+  background-color: var(--bg-fill);
+}
+
+.food{
+  background-color: red;
+}
+.modal{
+  height: 100vh;
+  width:100vw;
+  position:fixed;
+  top:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: rgba(0, 0, 0, 0.911);
+}
+
+.start-game, .game-over{
+  background-color: var(--bg-tertiary);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 40px;
+  border-radius: 8px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.game-over{
+  display:none;
+}
